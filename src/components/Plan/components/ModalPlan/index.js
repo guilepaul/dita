@@ -1,8 +1,15 @@
 import React from 'react';
+import {useNavigation} from '@react-navigation/core';
 
 import * as S from './styles';
 
 export const ModalPlan = props => {
+  const navigation = useNavigation();
+
+  const handleNavigate = () => {
+    navigation.navigate('Checkout');
+  };
+
   const handleCloseModal = () => {
     props.setModalVisible(!props.modalVisible);
   };
@@ -21,7 +28,12 @@ export const ModalPlan = props => {
               <S.Paragraph>{props.innerText}</S.Paragraph>
             </S.InnerContainer>
             <S.Value>{props.value.replace('a partir de', '')}</S.Value>
-            <S.ButtonCloseModal color={props.color} onPress={handleCloseModal}>
+            <S.ButtonCloseModal color={props.color} onPress={handleNavigate}>
+              <S.ButtonText>Confirmar</S.ButtonText>
+            </S.ButtonCloseModal>
+            <S.ButtonCloseModal
+              color="rgba(0, 0, 0, 0.9)"
+              onPress={handleCloseModal}>
               <S.ButtonText>Fechar</S.ButtonText>
             </S.ButtonCloseModal>
           </S.ViewModal>
