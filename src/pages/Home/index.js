@@ -26,18 +26,32 @@ export const Home = () => {
             background="#ea56f2"
             text="RESIDENCIAL SIMPLES"
             value="a partir de R$ 69,90"
+            innerText={`Este Plano contempla a limpeza simples
+
+* 2 dormitórios
+
+* 1 banheiro
+
+* 1 cozinha
+
+* 1 sala
+            `}
           />
           <Plan
             border="#00f9e4"
             background="#00f9e4"
             text="RESIDENCIAL COMPLETA"
             value="a partir de R$ 129,90"
+            innerText={`
+Plano Indisponível
+            `}
           />
           <Plan
             border="#eaf400"
             background="#eaf400"
             text="OUTROS SERVIÇOS DE LIMPEZA"
             value="a partir de R$ 129,90"
+            innerText={`Plano Indisponível`}
           />
         </S.PlanContainer>
         <S.ButtonContainer>

@@ -15,6 +15,10 @@ export const Plan = props => {
       <ModalPlan
         modalVisible={modalIsVisible}
         setModalVisible={setModalIsVisible}
+        color={props.background}
+        text={props.text}
+        innerText={props.innerText}
+        value={props.value}
       />
     </S.Container>
   );
