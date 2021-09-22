@@ -7,7 +7,7 @@ const {Navigator, Screen} = createNativeStackNavigator();
 
 const AppRoutes = () => {
   return (
-    <Navigator initialRouteName="Checkout">
+    <Navigator initialRouteName="Home">
       <Screen
         name="Home"
         component={Home}

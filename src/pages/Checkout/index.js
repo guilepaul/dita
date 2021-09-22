@@ -12,7 +12,6 @@ export const Checkout = () => {
   const minDate = today.add(1, 'days');
 
   const onDateChange = (date, type) => {
-    console.log(date);
     if (type === 'START_DATE') {
       setSelectedDate(date);
     }
