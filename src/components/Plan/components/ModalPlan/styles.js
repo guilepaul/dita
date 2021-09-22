@@ -34,6 +34,7 @@ export const ButtonCloseModal = styled.TouchableOpacity`
   height: 40px;
   border-radius: 4px;
   width: 100%;
+  margin: 5px 0;
 `;
 
 export const ButtonText = styled.Text`
