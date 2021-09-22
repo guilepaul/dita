@@ -5,9 +5,11 @@ import CalendarPicker from 'react-native-calendar-picker';
 import moment from 'moment';
 
 import * as S from './styles';
+import {ModalSuccess} from './components/ModalSuccess';
 
 export const Checkout = () => {
   const [selectedDate, setSelectedDate] = useState();
+  const [modalVisible, setModalVisible] = useState(false);
   const today = moment();
   const minDate = today.add(1, 'days');
 
@@ -15,6 +17,11 @@ export const Checkout = () => {
     if (type === 'START_DATE') {
       setSelectedDate(date);
     }
+  };
+
+  const handelOpenModal = () => {
+    setModalVisible(true);
+    console.log('uai');
   };
 
   return (
@@ -72,8 +79,12 @@ export const Checkout = () => {
           </S.CalendarWrapper>
         </S.Content>
         <S.ButtonContainer>
-          <Button>Confirmar</Button>
+          <Button onPress={handelOpenModal}>Confirmar</Button>
         </S.ButtonContainer>
+        <ModalSuccess
+          modalVisible={modalVisible}
+          setModalVisible={setModalVisible}
+        />
       </S.Container>
     </S.Fragment>
   );

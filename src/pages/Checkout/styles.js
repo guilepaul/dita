@@ -56,7 +56,7 @@ export const TextDate = styled.Text`
   color: purple;
 `;
 
-export const ButtonContainer = styled.View`
+export const ButtonContainer = styled.TouchableOpacity`
   width: 100%;
   margin-top: 40px;
 `;

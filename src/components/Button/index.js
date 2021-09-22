@@ -2,9 +2,9 @@ import React from 'react';
 
 import * as S from './styles';
 
-export const Button = ({children}) => {
+export const Button = ({children, onPress}) => {
   return (
-    <S.Container>
+    <S.Container onPress={onPress}>
       <S.TextButton>{children}</S.TextButton>
     </S.Container>
   );
