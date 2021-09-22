@@ -8,6 +8,7 @@ export const ModalPlan = props => {
 
   const handleNavigate = () => {
     navigation.navigate('Checkout');
+    handleCloseModal();
   };
 
   const handleCloseModal = () => {
